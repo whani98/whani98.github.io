@@ -7,11 +7,25 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: auto;
+}
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    border-bottom: 1px solid ;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    gap: 3px;
 }
 nav a {
+  background-color: yellowgreen;
   width: 100px;
-
-  display: flex;
-  padding-bottom: 50px;
-  margin-bottom: 10px;
+  padding: 50px 10px;
+  border-radius: 5px;
+  text-align: center;
+  border-radius: 50%;
 }
