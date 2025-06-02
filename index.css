@@ -23,9 +23,8 @@ nav {
 }
 nav a {
   background-color: yellowgreen;
-  width: 100px;
-  padding: 50px 10px;
-  border-radius: 5px;
+  width: 60px;
+  padding: 30px 10px;
   text-align: center;
   border-radius: 50%;
 }
