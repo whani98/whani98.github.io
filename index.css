@@ -10,19 +10,19 @@ header {
   margin: auto;
 }
 header h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    margin-top: 30px;
-    border-bottom: 1px solid ;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 30px;
+  border-bottom: 1px solid;
 }
 nav {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+  gap: 3px;
 }
 nav a {
-  background-color: yellowgreen;
+  background-color: wheat;
   width: 60px;
   padding: 30px 10px;
   text-align: center;
