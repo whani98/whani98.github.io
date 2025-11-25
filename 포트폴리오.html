@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hwanhee Lee | Portfolio Mind Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/ibm-plex-sans-kr/css/ibm-plex-sans-kr.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="포트폴리오.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <div class="logo">Lee<span>Hwanhee</span></div>
+        <nav class="main-nav">
+          <a href="#home">Home</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#about">About Me</a>
+          <a href="#ui-works">UI Works</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- 1) Mind Map Home-->
+      <section class="section hero" id="home">
+        <div class="hero__inner">
+          <!-- Mindmap Wrapper -->
+          <div class="mindmap">
+            <!-- 중앙 메인 노드 -->
+            <div class="mindmap__center">
+              <h1 class="mindmap__name">Hwanhee Lee</h1>
+              <p class="mindmap__role">Web Developer</p>
+            </div>
+
+            <!-- 가지 노드들 -->
+            <a href="#skills" class="mindmap__node mindmap__node--skills">
+              <span class="mindmap__node-label">Skills</span>
+            </a>
+
+            <a href="#projects" class="mindmap__node mindmap__node--projects">
+              <span class="mindmap__node-label">Projects</span>
+            </a>
+
+            <a href="#about" class="mindmap__node mindmap__node--about">
+              <span class="mindmap__node-label">About Me</span>
+            </a>
+
+            <a href="#ui-works" class="mindmap__node mindmap__node--uiworks">
+              <span class="mindmap__node-label">UI Works</span>
+            </a>
+
+            <a href="#contact" class="mindmap__node mindmap__node--contact">
+              <span class="mindmap__node-label">Contact</span>
+            </a>
+
+            <a
+              href="#skills"
+              class="mindmap__node mindmap__node--learning"
+              title="Learning Map"
+            >
+              <span class="mindmap__node-label">Learning Map</span>
+            </a>
+
+            <!-- 선(커브 느낌은 CSS로) -->
+            <svg class="mindmap__lines" viewBox="0 0 800 600">
+              <!-- 중심(400,300) 기준으로 곡선들 -->
+              <path
+                d="M400,300 C300,220 260,190 220,170"
+                class="mindmap__line"
+              />
+              <path
+                d="M400,300 C500,220 540,190 580,170"
+                class="mindmap__line"
+              />
+              <path
+                d="M400,300 C300,320 260,340 220,360"
+                class="mindmap__line"
+              />
+              <path
+                d="M400,300 C500,320 540,340 580,360"
+                class="mindmap__line"
+              />
+              <path
+                d="M400,300 C380,380 360,420 340,460"
+                class="mindmap__line"
+              />
+              <path
+                d="M400,300 C450,380 480,430 510,470"
+                class="mindmap__line"
+              />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!--2) Skills-->
+      <section class="section section--split" id="skills">
+        <div class="section__inner">
+          <!-- Left: 작은 마인드맵 느낌 -->
+          <div class="section-left">
+            <h2 class="section-title">Skills</h2>
+            <div class="mini-mindmap">
+              <div class="mini-mindmap__center">Skills</div>
+              <ul className="mini-mindmap__list">
+                <li>HTML / CSS</li>
+                <li>React</li>
+                <li>JavaScript</li>
+                <li>UI / UX</li>
+                <li>Git / GitHub</li>
+                <li>Tools (Figma / Vite)</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Right: 상세 카드 -->
+          <div class="section-right card">
+            <h3 class="card__title">HTML / CSS</h3>
+            <p class="card__subtitle">
+              구조적인 마크업과 깨끗한 레이아웃을 중심으로 화면을 구현합니다.
+            </p>
+
+            <div class="card__body">
+              <h4 class="card__heading">사용 기술 & 경험</h4>
+              <ul class="card__list">
+                <li>시멘틱 태그를 활용한 접근성 있는 마크업</li>
+                <li>Flex / Grid를 이용한 반응형 레이아웃 구현</li>
+                <li>컴포넌트 단위 스타일링 및 재사용 가능한 클래스 설계</li>
+              </ul>
+
+              <h4 class="card__heading">프로젝트 사례</h4>
+              <p class="card__text">
+                공방 클래스 예약 플랫폼에서 메인 페이지, 프로그램 리스트,
+                리뷰·QnA 페이지의 마크업과 CSS를 담당했습니다. UI의 구조를
+                정리하고, 사용자가 정보를 빠르게 스캔할 수 있도록 레이아웃과
+                타이포그래피를 설계했습니다.
+              </p>
+
+              <div class="card__thumb-placeholder">
+                Skills 관련 스크린샷 영역
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--3) Projects-->
+      <section class="section section--split" id="projects">
+        <div class="section__inner">
+          <div class="section-left">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-nodes">
+              <div class="projects-node">
+                공방 클래스 플랫폼<br />
+                <span>(React + Spring)</span>
+              </div>
+              <div class="projects-node">리뷰 / QnA UI 작업물</div>
+              <div class="projects-node">반응형 퍼블리셔 모듈</div>
+            </div>
+            <p class="section-note">
+              각 노드는 실제 피그마에선 클릭 시 오른쪽 상세 카드가 바뀌도록
+              구성하면 좋아요.
+            </p>
+          </div>
+
+          <div class="section-right card">
+            <h3 class="card__title">공방 클래스 플랫폼 (React + Spring)</h3>
+            <p class="card__subtitle">
+              공방 프로그램 검색, 예약, 리뷰까지 한 번에 가능한 서비스
+            </p>
+
+            <div class="card__body">
+              <h4 class="card__heading">기술 스택</h4>
+              <ul class="card__list">
+                <li>Frontend: React, React Router, Axios</li>
+                <li>Styling: CSS 모듈, 반응형 레이아웃</li>
+                <li>Backend: Spring Boot, MySQL</li>
+              </ul>
+
+              <h4 class="card__heading">기여도</h4>
+              <p class="card__text">
+                메인 페이지, 프로그램 카드 UI, 필터/검색 영역, 리뷰·QnA UI 등
+                화면 전반의 구조와 스타일을 담당했습니다.
+              </p>
+
+              <h4 class="card__heading">문제 해결 사례</h4>
+              <p class="card__text">
+                긴 리스트에서 ‘더보기’ 버튼과 슬라이더 버튼을 통해 사용자 경험을
+                해치지 않고 많은 콘텐츠를 보여줄 수 있도록 설계했습니다. 또한
+                레이아웃 흔들림, 모달 레이어 이슈 등 CSS 문제들을 정리하며 UI
+                안정성을 높였습니다.
+              </p>
+
+              <div class="card__thumb-placeholder">
+                프로젝트 캡처 or GIF 영역
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--4) About Me-->
+      <section class="section section--split" id="about">
+        <div class="section__inner">
+          <div class="section-left">
+            <h2 class="section-title">About Me</h2>
+            <ul class="tag-list">
+              <li>수학 강사 경력</li>
+              <li>에듀테크 경력</li>
+              <li>수학 마인드맵 연구</li>
+              <li>개발 전향 계기</li>
+              <li>UI / UX 관심</li>
+            </ul>
+          </div>
+
+          <div class="section-right card">
+            <h3 class="card__title">
+              정보를 구조화하는 사람, 화면으로 풀어내는 개발자
+            </h3>
+            <p class="card__text">
+              교육 분야에서 수학 전 과정을 마인드맵 형태로 재구조화하는 작업을
+              진행하며, 복잡한 정보를 시각적으로 정리하는 방법을 배웠습니다. 이
+              경험은 자연스럽게 UI 구조 설계와 화면 설계로 확장되었고, 현재는
+              이를 웹에서 구현하는 프론트엔드 개발자를 목표로 하고 있습니다.
+            </p>
+            <p class="card__text">
+              사용자가 ‘읽기 편한 화면’을 만드는 것에 가장 큰 흥미를 느낍니다.
+              요소의 간격, 정렬, 정보의 우선순위를 조정하는 과정에서 서비스의
+              사용성이 달라진다는 걸 경험했고, 그 지점을 계속 탐구하고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) UI Works-->
+      <section class="section" id="ui-works">
+        <div class="section__inner section__inner--column">
+          <h2 class="section-title">UI Works</h2>
+          <p class="section-desc">
+            퍼블리셔 / 프론트엔드 관점에서 구현한 UI 작업들을 모아놓은
+            공간입니다.
+          </p>
+
+          <div class="ui-grid">
+            <div class="ui-card">
+              <div class="ui-card__thumb">반응형 레이아웃 UI</div>
+              <p class="ui-card__text">
+                공방 프로그램 카드 그리드를 반응형으로 구현해, 해상도에 따라
+                자연스럽게 줄 수가 바뀌도록 설계했습니다.
+              </p>
+            </div>
+            <div class="ui-card">
+              <div class="ui-card__thumb">캐러셀 / 슬라이더 UI</div>
+              <p class="ui-card__text">
+                메인 배너 슬라이더와 가로 스크롤 리스트에 슬라이더 버튼을 더해,
+                많은 콘텐츠를 깔끔하게 보여주는 구조를 만들었습니다.
+              </p>
+            </div>
+            <div class="ui-card">
+              <div class="ui-card__thumb">검색 & 필터 UI</div>
+              <p class="ui-card__text">
+                공방 지역, 난이도, 가격, 시간 등을 한 번에 필터링할 수 있는 검색
+                영역을 설계하고 마크업·스타일링을 담당했습니다.
+              </p>
+            </div>
+            <div class="ui-card">
+              <div class="ui-card__thumb">모달 & 토스트 스타일링</div>
+              <p class="ui-card__text">
+                리뷰 수정 모달, 문의 모달, 토스트 메시지 위치 및 스타일을
+                조정하여 사용 흐름이 끊기지 않는 인터랙션을 만들었습니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6) Contact-->
+      <section class="section section--light" id="contact">
+        <div class="section__inner section__inner--column">
+          <h2 class="section-title">Contact</h2>
+          <p class="section-desc">
+            협업, 채용, 혹은 가벼운 대화도 환영합니다. 아래 채널로 연락 주세요.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-item">
+              <span class="contact-label">Email</span>
+              <a href="mailto:whani98@naver.com">whani98@naver.com</a>
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">GitHub</span>
+              <a href="https://github.com/your-github" target="_blank"
+                >github.com/your-github</a
+              >
+            </div>
+            <div class="contact-item">
+              <span class="contact-label">Notion</span>
+              <a href="#" target="_blank">포트폴리오 링크 자리</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>상업적 목적이 아닌 개인 포트폴리오용으로 제작되었습니다.</p>
+      <p>© 2025 Hwanhee Lee. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="포트폴리오 copy.js"></script>
+</html>
