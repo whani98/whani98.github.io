@@ -97,6 +97,7 @@ body {
 
 .section-right {
   flex: 1;
+  gap: 10px;
 }
 
 .section-title {
@@ -158,11 +159,14 @@ body {
 .card__thumb-placeholder {
   margin-top: 18px;
   border-radius: 16px;
-  border: 1px dashed #c0d1c0;
   text-align: center;
   padding: 26px 10px;
   font-size: 13px;
   color: #7b8c7b;
+}
+.card__thumb-placeholder img {
+  border: 1px solid #f0f0f0;
+  width: 350px;
 }
 
 /* Hero (Mind Map Home)*/
@@ -414,8 +418,12 @@ body {
   font-size: 14px;
   color: #657565;
   transition: transform 0.2s ease;
+  overflow: hidden;
 }
-
+.ui-card__thumb img {
+  object-fit: cover;
+  height: 80px;
+}
 .ui-card:hover .ui-card__thumb {
   transform: scale(1.02);
 }
@@ -447,7 +455,8 @@ body {
   color: #2f4f36;
 }
 
-.contact-item a {
+.contact-item a,
+.contact-item p {
   color: #2f6b3c;
   text-decoration: none;
   word-break: break-all;
@@ -505,4 +514,27 @@ body {
   background: #d9ead3;
   color: #2f6b3c;
   font-weight: 600;
+}
+
+.top-button {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
+  width: 45px;
+  height: 45px;
+  background-color: #2f6b3c;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: opacity 0.3s ease;
+}
+
+.top-button:hover {
+  opacity: 0.85;
 }

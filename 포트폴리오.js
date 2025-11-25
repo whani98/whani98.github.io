@@ -84,3 +84,14 @@ document.querySelector(".logo").addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// Top Button
+const topBtn = document.getElementById("topButton");
+
+// 누르면 부드럽게 최상단 이동
+topBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
