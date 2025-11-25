@@ -456,7 +456,7 @@ body {
 }
 
 .contact-item a,
-.contact-item p {
+.contact-item span {
   color: #2f6b3c;
   text-decoration: none;
   word-break: break-all;
