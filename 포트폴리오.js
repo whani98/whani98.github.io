@@ -95,3 +95,33 @@ topBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// 모달 요소들
+const modal = document.getElementById("imgModal");
+const modalImg = document.getElementById("modalImg");
+const captionText = document.getElementById("modalCaption");
+const closeBtn = document.querySelector(".modal-close");
+
+// 모든 preview 이미지에 이벤트 추가
+document.querySelectorAll(".preview-img").forEach((img) => {
+  img.addEventListener("click", () => {
+    modal.style.display = "block";
+    modalImg.src = img.src;
+    captionText.innerHTML = img.alt || "";
+    document.body.style.overflow = "hidden"; // 모달 열릴 때 스크롤 잠금
+  });
+});
+
+// 닫기 버튼 기능
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  document.body.style.overflow = "auto";
+});
+
+// 모달 영역 클릭 시 닫기
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+});

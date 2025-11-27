@@ -102,21 +102,62 @@
             <h2 class="section-title">Skills</h2>
             <div class="mini-mindmap">
               <div class="mini-mindmap__center">Skills</div>
-              <ul class="mini-mindmap__list">
-                <li>HTML / CSS</li>
-                <li>React</li>
-                <li>JavaScript</li>
-                <li>UI / UX</li>
-                <li>Git / GitHub</li>
-                <li>Tools (Figma / Vite)</li>
-              </ul>
+
+              <div class="skills-lists">
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🟩 Front-end</li>
+                  <li><strong>JavaScript</strong></li>
+                  <li><strong>jQuery</strong></li>
+                  <li><strong>HTML5</strong></li>
+                  <li><strong>CSS3</strong></li>
+                  <li>Ajax</li>
+                  <li>React</li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🟧 Back-end</li>
+                  <li>Java</li>
+                  <li>JSP &amp; Servlet</li>
+                  <li>MyBatis</li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🟦 Framework / Library</li>
+                  <li>Spring Framework</li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🟪 Database</li>
+                  <li>Oracle</li>
+                  <li>MySQL</li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🛠 Tools</li>
+                  <li>Eclipse</li>
+                  <li>IntelliJ IDEA</li>
+                  <li>Visual Studio Code</li>
+                  <li><strong>Figma</strong></li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">💻 Environment</li>
+                  <li>Windows 10</li>
+                  <li>Apache Tomcat</li>
+                </ul>
+
+                <ul class="mini-mindmap__list">
+                  <li class="mini-mindmap__category">🤝 Collaboration</li>
+                  <li>GitHub</li>
+                </ul>
+              </div>
             </div>
           </div>
 
           <div class="section-right card">
             <h3 class="card__title">UI 구조 설계 기반 퍼블리싱</h3>
             <p class="card__subtitle">
-              시멘틱 마크업과 레이아웃 안정화를 중심으로 화면을 구성합니다.
+              시멘틱 마크업과 레이아웃 안정화를 중심으로 화면을 구성
             </p>
 
             <div class="card__body">
@@ -130,14 +171,21 @@
               <h4 class="card__heading">실제 적용 경험</h4>
               <p class="card__text">
                 VERDE WEB ERP에서는 전체 CSS를 전담하며 컬러·타이포·버튼·여백의
-                UI 시스템을 구축했습니다. DIA 공방 플랫폼에서는 검색창, 카드
-                슬라이드, 상태 기반 UI 등 React 환경에서 컴포넌트 스타일링을
-                진행했습니다.
+                UI 시스템을 구축, DIA 공방 플랫폼에서는 검색창, 카드 슬라이드,
+                상태 기반 UI 등 React 환경에서 컴포넌트 스타일링을 진행했습니다.
               </p>
 
               <div class="card__thumb-placeholder">
-                <img src="./image/verde-page.jpg" />
-                <img src="./image/search-bar.jpg" />
+                <img
+                  src="./image/verde-page.jpg"
+                  target="_blank"
+                  class="preview-img"
+                />
+                <img
+                  src="./image/search-bar.jpg"
+                  target="_blank"
+                  class="preview-img"
+                />
               </div>
             </div>
           </div>
@@ -166,8 +214,8 @@
             <!-- VERDE WEB ERP 프로젝트 카드 -->
             <div class="card">
               <h3 class="card__title">VERDE WEB ERP (JSP)</h3>
+              <p class="card__subtitle">2025.08 ~ 2025.09</p>
               <p class="card__subtitle">CSS 100% 전담 · UI 시스템 구축</p>
-
               <div class="card__body">
                 <h4 class="card__heading">주요 기여</h4>
                 <ul class="card__list">
@@ -185,9 +233,17 @@
 
                 <div class="card__thumb-placeholder">
                   <img
+                    class="preview-img"
                     src="/image/VERDE-WEB-ERP.gif"
                     alt="VERDE 세미 프로젝트 Gif"
                   />
+                  <iframe
+                    style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                    width="800"
+                    height="450"
+                    src="https://embed.figma.com/slides/KehgDBr6uDGIwNt1hcr9ul/Ctrl-S%7CVERDE-WEB-ERP?node-id=3-84&embed-host=share"
+                    allowfullscreen
+                  ></iframe>
                 </div>
                 <div class="contact-item">
                   <span class="contact-label">GitHub</span>
@@ -202,9 +258,8 @@
 
             <!-- DIA 파이널 프로젝트 카드 -->
             <div class="card">
-              <h3 class="card__title">
-                DIA 공방 플랫폼 (React + Spring) [*진행중]
-              </h3>
+              <h3 class="card__title">DIA 공방 플랫폼 (React + Spring)</h3>
+              <p class="card__subtitle">2025.10 ~ 2025.12 (*진행중)</p>
               <p class="card__subtitle">
                 검색 · 예약 · 리뷰까지 가능한 공방 클래스 플랫폼
               </p>
@@ -228,10 +283,13 @@
 
                 <div class="card__thumb-placeholder">
                   <img
+                    class="preview-img"
                     src="./image/dia-project-file.gif"
                     alt="DIA 파이널 프로젝트 Gif"
+                    target="_blank"
                   />
                 </div>
+
                 <div class="contact-item">
                   <span class="contact-label">GitHub</span>
                   <a
@@ -267,14 +325,29 @@
             <p class="card__text">
               교육 분야에서 중·고등 수학 전 과정을 마인드맵으로 재구조화하며
               ‘정보의 흐름·우선순위·시각적 구조’를 정리하는 능력을 쌓았습니다.
+              이 경험을 토대로 교육원에서 학습한 내용을 마인드맵 형태로
+              구조화하여 복습하였습니다.
             </p>
             <p class="card__text">
               이 사고방식은 자연스럽게 UI 설계로 확장되었고, 지금은 사용자의
               흐름을 방해하지 않는 구조적 UI를 구현하는 데 가장 큰 흥미를
               느낍니다.
             </p>
+
             <div class="card__thumb-placeholder">
-              <img src="./image/업무프로세스.jpg" alt="업무프로세스" />
+              <img
+                class="preview-img"
+                src="./image/업무프로세스.jpg"
+                alt="업무프로세스"
+                target="_blank"
+              />
+              <iframe
+                style="border: 1px solid rgba(0, 0, 0, 0.1)"
+                width="800"
+                height="450"
+                src="https://embed.figma.com/board/Hs0SC6EaPmDAGWjHeGF3y7/HTML-CSS-%EB%A7%88%EC%9D%B8%EB%93%9C%EB%A7%B5?node-id=0-1&embed-host=share"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
@@ -291,7 +364,12 @@
           <div class="ui-grid">
             <div class="ui-card">
               <div class="ui-card__thumb">
-                <img src="./image/반응형레이아웃.gif" alt="반응형레이아웃" />
+                <img
+                  class="preview-img"
+                  src="./image/반응형레이아웃.gif"
+                  alt="반응형레이아웃"
+                  target="_blank"
+                />
               </div>
               <p class="ui-card__text">
                 다양한 해상도에서 안정적으로 유지되는 카드 그리드를
@@ -301,7 +379,12 @@
 
             <div class="ui-card">
               <div class="ui-card__thumb">
-                <img src="./image/slider.gif" alt="slider" />
+                <img
+                  src="./image/slider.gif"
+                  alt="slider"
+                  target="_blank"
+                  class="preview-img"
+                />
               </div>
               <p class="ui-card__text">
                 콘텐츠 양이 많아도 사용자 흐름이 끊기지 않도록 슬라이더 UI를
@@ -311,7 +394,12 @@
 
             <div class="ui-card">
               <div class="ui-card__thumb">
-                <img src="./image/searchbar.gif" alt="searchbar" />
+                <img
+                  class="preview-img"
+                  src="./image/searchbar.gif"
+                  alt="searchbar"
+                  target="_blank"
+                />
               </div>
               <p class="ui-card__text">
                 공방 지역·난이도·가격·시간을 한 번에 필터링할 수 있도록 UI
@@ -339,14 +427,7 @@
                 >whani98.github.io</a
               >
             </div>
-            <div class="contact-item">
-              <span class="contact-label">FigJam</span>
-              <a
-                href="https://www.figma.com/board/Hs0SC6EaPmDAGWjHeGF3y7/HTML-CSS-%EB%A7%88%EC%9D%B8%EB%93%9C%EB%A7%B5?node-id=0-1&p=f&t=406ylpznll1hgYge-0"
-                target="_blank"
-                >FigJam mindmap</a
-              >
-            </div>
+
             <div class="contact-item">
               <span class="contact-label">Phone</span>
               <span>010-3762-0417</span>
@@ -364,6 +445,12 @@
     <button id="topButton" class="top-button">
       <i class="fi fi-rr-angle-double-small-up"></i>
     </button>
+    <!-- 모달 구조 (body 맨 아래 넣으면 깔끔함) -->
+    <div id="imgModal" class="modal">
+      <span class="modal-close">&times;</span>
+      <img class="modal-content" id="modalImg" />
+      <div id="modalCaption"></div>
+    </div>
     <script src="포트폴리오.js"></script>
   </body>
 </html>

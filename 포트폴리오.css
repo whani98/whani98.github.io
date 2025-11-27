@@ -166,7 +166,7 @@ body {
 }
 .card__thumb-placeholder img {
   border: 1px solid #f0f0f0;
-  width: 350px;
+  width: 100%;
 }
 
 /* Hero (Mind Map Home)*/
@@ -357,7 +357,7 @@ body {
 .projects-node {
   border-radius: 999px;
   background: #e6f4e6;
-  padding: 10px 14px;
+  padding: 10px 20px;
   font-size: 14px;
   line-height: 1.4;
 }
@@ -418,12 +418,14 @@ body {
   font-size: 14px;
   color: #657565;
   transition: transform 0.2s ease;
-  overflow: hidden;
+  min-height: max-content;
 }
 .ui-card__thumb img {
-  object-fit: cover;
-  height: 80px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
+
 .ui-card:hover .ui-card__thumb {
   transform: scale(1.02);
 }
@@ -537,4 +539,122 @@ body {
 
 .top-button:hover {
   opacity: 0.85;
+}
+/* 모달 전체 배경 */
+.modal {
+  display: none; /* 기본은 숨김 */
+  position: fixed;
+  z-index: 2000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* 모달 내부 이미지 */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 70%;
+  max-height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  animation: zoom 0.25s ease;
+}
+
+/* 설명 텍스트 (선택) */
+#modalCaption {
+  margin: 10px auto;
+  text-align: center;
+  color: #f1f1f1;
+  font-size: 14px;
+  max-width: 80%;
+}
+
+/* 확대 애니메이션 */
+@keyframes zoom {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* X 버튼 */
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal-close:hover {
+  color: #ddd;
+}
+
+/* 작은 화면 대응 */
+@media (max-width: 1000px) {
+  .modal-content {
+    max-width: 95%;
+  }
+}
+
+.preview-img {
+  cursor: pointer;
+}
+/* Skills 리스트 전체 레이아웃 */
+.skills-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+
+/* mini-mindmap 리스트 박스 기본 스타일 보강 */
+.mini-mindmap__list {
+  list-style: none;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fafaf7;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  font-size: 13px;
+  color: #555;
+}
+
+/* 카테고리(첫 줄) 스타일 */
+.mini-mindmap__category {
+  font-weight: 600;
+  color: #2f4f36;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #d6e3cf;
+  padding-bottom: 4px;
+}
+
+/* 각 스킬 li 간격 */
+.mini-mindmap__list li + li {
+  margin-top: 3px;
+}
+
+/* 반응형 - 너무 좁아지면 한 줄로 */
+@media (max-width: 600px) {
+  .skills-lists {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+  .skills-lists {
+    grid-template-columns: 1fr;
+  }
 }
