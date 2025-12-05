@@ -438,11 +438,28 @@ body {
   color: #2f4f36;
 }
 
-.contact-item a {
+.contact-item a,
+.contact-item span {
   color: #2f6b3c;
   text-decoration: none;
 }
+.copy-phone {
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
 
+.copy-phone:hover {
+  opacity: 0.7;
+}
+
+.copy-message {
+  font-size: 13px;
+  color: #29a746;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
 /* =========================
    Footer
 ========================= */
