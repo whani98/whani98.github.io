@@ -13,10 +13,12 @@ body {
   margin: 0;
   font-family: "IBM Plex Sans KR", sans-serif;
   color: #333;
-  background-color: #fafaf7; /* 연한 아이보리 */
+  background-color: #fafaf7;
 }
 
-/*  헤더 */
+/* =========================
+   Header
+========================= */
 .site-header {
   position: sticky;
   top: 0;
@@ -45,7 +47,7 @@ body {
 }
 
 .logo span {
-  color: #4a8f5c; /* 포인트 그린 */
+  color: #4a8f5c;
 }
 
 .main-nav {
@@ -62,12 +64,15 @@ body {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-.main-nav a:hover {
+.main-nav a:hover,
+.main-nav a.active {
   background: #e6f4e6;
   color: #2f6b3c;
 }
 
-/* 공통 섹션*/
+/* =========================
+   공통 섹션
+========================= */
 .section {
   padding: 80px 20px;
 }
@@ -87,17 +92,12 @@ body {
   flex-direction: column;
 }
 
-.section--split .section__inner {
-  align-items: flex-start;
-}
-
 .section-left {
   flex: 0 0 35%;
 }
 
 .section-right {
   flex: 1;
-  gap: 10px;
 }
 
 .section-title {
@@ -112,7 +112,9 @@ body {
   color: #555;
 }
 
-/* 카드 공통 */
+/* =========================
+   Card 공통
+========================= */
 .card {
   background: #ffffff;
   border-radius: 24px;
@@ -128,7 +130,8 @@ body {
 .card__subtitle {
   font-size: 15px;
   color: #777;
-  margin: 0 0 20px;
+  margin: 0 0 12px;
+  line-height: 1.5;
 }
 
 .card__body {
@@ -139,8 +142,9 @@ body {
 
 .card__heading {
   font-size: 15px;
-  margin: 18px 0 8px;
+  margin: 20px 0 8px;
   color: #2f4f36;
+  font-weight: 700;
 }
 
 .card__list {
@@ -154,6 +158,7 @@ body {
 
 .card__text {
   margin: 6px 0;
+  line-height: 1.7;
 }
 
 .card__thumb-placeholder {
@@ -167,9 +172,12 @@ body {
 .card__thumb-placeholder img {
   border: 1px solid #f0f0f0;
   width: 100%;
+  border-radius: 12px;
 }
 
-/* Hero (Mind Map Home)*/
+/* =========================
+   HERO Mind Map
+========================= */
 .hero {
   min-height: 80vh;
   display: flex;
@@ -185,17 +193,16 @@ body {
   position: relative;
   width: 100%;
   max-width: 1000px;
-  height: 650px; /* 기존 520px → 넓힘 */
+  height: 650px;
   margin: 0 auto;
 }
 
-/* 중앙 노드 */
 .mindmap__center {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 240px; /* 기존 220px */
-  height: 240px; /* 기존 220px */
+  width: 240px;
+  height: 240px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: #d9ead3;
@@ -216,7 +223,7 @@ body {
   color: #355c3f;
 }
 
-/* 방사형 노드 공통 */
+/* 노드 기본 */
 .mindmap__node {
   position: absolute;
   border-radius: 50%;
@@ -232,30 +239,28 @@ body {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.mindmap__node:hover {
+  transform: scale(1.06);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
 .mindmap__node-label {
   padding: 0 8px;
 }
 
-/* 호버 인터랙션 */
-.mindmap__node:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-}
-
-/* 각 노드 위치 & 색상 (대략적인 값) */
+/* 각 노드 위치 */
 .mindmap__node--skills {
   width: 150px;
   height: 150px;
-  top: 5%; /* 더 위 */
-  left: 50px; /* 더 왼쪽 */
+  top: 5%;
+  left: 50px;
   background: #e6f4e6;
 }
-
 .mindmap__node--projects {
   width: 160px;
   height: 160px;
   top: 5%;
-  right: 50px; /* 더 오른쪽 */
+  right: 50px;
   background: #e0f1e8;
 }
 .mindmap__node--about {
@@ -263,46 +268,31 @@ body {
   height: 150px;
   top: 40%;
   left: 150px;
-  /* transform: translateY(-20%); */
   background: #f2f6e9;
 }
-
 .mindmap__node--uiworks {
   width: 160px;
   height: 160px;
   top: 40%;
   right: 150px;
-  /* transform: translateY(-20%); */
   background: #f6efe9;
 }
-
 .mindmap__node--contact {
   width: 130px;
   height: 130px;
   bottom: 10%;
-  left: 50px; /* 기존보다 훨씬 바깥 */
+  left: 50px;
   background: #e8efe6;
 }
-
 .mindmap__node--learning {
   width: 140px;
   height: 140px;
   bottom: 10%;
-  right: 50px; /* 기존보다 오른쪽 멀리 */
+  right: 50px;
   background: #e9f3e7;
 }
 
-/* 노드 중복 transform 방지 */
-.mindmap__node--skills:hover,
-.mindmap__node--projects:hover,
-.mindmap__node--about:hover,
-.mindmap__node--uiworks:hover,
-.mindmap__node--contact:hover,
-.mindmap__node--learning:hover {
-  transform: scale(1.05);
-}
-
-/* 선 (SVG) */
+/* 라인 */
 .mindmap__lines {
   position: absolute;
   inset: 0;
@@ -315,8 +305,9 @@ body {
   stroke-width: 2;
   stroke-linecap: round;
 }
-
-/* Skills - mini mindmap */
+/* =========================
+   Skills
+========================= */
 .mini-mindmap {
   background: #f4f7f1;
   border-radius: 20px;
@@ -324,9 +315,6 @@ body {
 }
 
 .mini-mindmap__center {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 6px 14px;
   border-radius: 999px;
   background: #d9ead3;
@@ -335,19 +323,40 @@ body {
   margin-bottom: 10px;
 }
 
+.skills-lists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px 14px;
+  margin-top: 10px;
+}
+
 .mini-mindmap__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  color: #555;
+  list-style: none; /* ✔ 불릿 제거 */
+  margin: 0; /* ✔ 기본 margin 제거 */
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fafaf7;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  font-size: 13px;
 }
 
 .mini-mindmap__list li {
-  margin-bottom: 4px;
+  list-style: none; /* ✔ li의 불릿 제거 */
+  margin-left: 0; /* ✔ 들여쓰기 제거 */
+  padding-left: 0;
 }
 
-/* Projects 왼쪽 노드 */
+.mini-mindmap__category {
+  font-weight: 600;
+  color: #2f4f36;
+  margin-bottom: 6px;
+  border-bottom: 1px dashed #d6e3cf;
+  padding-bottom: 4px;
+}
+
+/* =========================
+   Projects nodes
+========================= */
 .projects-nodes {
   display: flex;
   flex-direction: column;
@@ -362,42 +371,31 @@ body {
   line-height: 1.4;
 }
 
-.projects-node span {
-  font-size: 12px;
-  color: #58755c;
-}
-
-.section-note {
-  margin-top: 12px;
-  font-size: 12px;
-  color: #888;
-}
-
-/* About Me tag list */
+/* =========================
+   About Me
+========================= */
 .tag-list {
   list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  padding: 0;
 }
 
 .tag-list li {
-  display: inline-flex;
-  align-items: center;
   padding: 6px 12px;
-  border-radius: 999px;
   background: #e9f3e7;
+  border-radius: 999px;
   font-size: 13px;
 }
 
-/* UI Works Grid */
+/* =========================
+   UI Works
+========================= */
 .ui-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
-  margin-top: 20px;
 }
 
 .ui-card {
@@ -405,9 +403,6 @@ body {
   border-radius: 20px;
   padding: 16px 18px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 
 .ui-card__thumb {
@@ -415,39 +410,25 @@ body {
   background: #f0f4f0;
   padding: 24px 10px;
   text-align: center;
-  font-size: 14px;
-  color: #657565;
-  transition: transform 0.2s ease;
-  min-height: max-content;
 }
 .ui-card__thumb img {
   width: 100%;
-  height: 100%;
   object-fit: contain;
 }
 
-.ui-card:hover .ui-card__thumb {
-  transform: scale(1.02);
-}
-
-.ui-card__text {
-  font-size: 13px;
-  color: #555;
-}
-
-/*  Contact */
+/* =========================
+   Contact
+========================= */
 .contact-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 18px;
 }
 
 .contact-item {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  align-items: baseline;
   font-size: 14px;
 }
 
@@ -457,67 +438,25 @@ body {
   color: #2f4f36;
 }
 
-.contact-item a,
-.contact-item span {
+.contact-item a {
   color: #2f6b3c;
   text-decoration: none;
-  word-break: break-all;
 }
 
-.contact-item a:hover {
-  text-decoration: underline;
-}
-
-/* Footer */
+/* =========================
+   Footer
+========================= */
 .site-footer {
   padding: 20px;
   text-align: center;
   font-size: 12px;
   color: #888;
   border-top: 1px solid #e0ddd3;
-  background: #fafaf7;
 }
 
-/* 반응형*/
-@media (max-width: 900px) {
-  .section__inner {
-    flex-direction: column;
-  }
-
-  .section-left {
-    flex: none;
-  }
-
-  .mindmap {
-    height: 480px;
-  }
-
-  .main-nav {
-    display: none;
-  }
-}
-
-@media (max-width: 600px) {
-  .mindmap__center {
-    width: 180px;
-    height: 180px;
-  }
-
-  .mindmap__name {
-    font-size: 20px;
-  }
-
-  .mindmap__node {
-    font-size: 13px;
-  }
-}
-
-.main-nav a.active {
-  background: #d9ead3;
-  color: #2f6b3c;
-  font-weight: 600;
-}
-
+/* =========================
+   Top Button
+========================= */
 .top-button {
   position: fixed;
   right: 25px;
@@ -530,51 +469,42 @@ body {
   border-radius: 50%;
   font-size: 20px;
   cursor: pointer;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: opacity 0.3s ease;
 }
 
 .top-button:hover {
   opacity: 0.85;
 }
-/* 모달 전체 배경 */
+
+/* =========================
+   Modal
+========================= */
 .modal {
-  display: none; /* 기본은 숨김 */
+  display: none;
   position: fixed;
   z-index: 2000;
   padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  inset: 0;
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* 모달 내부 이미지 */
 .modal-content {
   margin: auto;
   display: block;
   width: 70%;
   max-height: 100%;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   animation: zoom 0.25s ease;
 }
 
-/* 설명 텍스트 (선택) */
 #modalCaption {
   margin: 10px auto;
   text-align: center;
   color: #f1f1f1;
   font-size: 14px;
-  max-width: 80%;
 }
 
-/* 확대 애니메이션 */
 @keyframes zoom {
   from {
     transform: scale(0.7);
@@ -586,136 +516,34 @@ body {
   }
 }
 
-/* X 버튼 */
 .modal-close {
   position: absolute;
   top: 20px;
   right: 35px;
-  color: #fff;
   font-size: 40px;
-  font-weight: bold;
+  color: #fff;
   cursor: pointer;
-  transition: 0.2s;
 }
 
-.modal-close:hover {
-  color: #ddd;
-}
+/* =========================
+   반응형
+========================= */
+@media (max-width: 900px) {
+  .section__inner {
+    flex-direction: column;
+  }
 
-/* 작은 화면 대응 */
-@media (max-width: 1000px) {
-  .modal-content {
-    max-width: 95%;
+  .main-nav {
+    display: none;
   }
 }
 
-.preview-img {
-  cursor: pointer;
-}
-/* Skills 리스트 전체 레이아웃 */
-.skills-lists {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 10px 14px;
-  margin-top: 10px;
-}
-
-/* mini-mindmap 리스트 박스 기본 스타일 보강 */
-.mini-mindmap__list {
-  list-style: none;
-  margin: 0;
-  padding: 10px 12px;
-  border-radius: 12px;
-  background: #fafaf7;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
-  font-size: 13px;
-  color: #555;
-}
-
-/* 카테고리(첫 줄) 스타일 */
-.mini-mindmap__category {
-  font-weight: 600;
-  color: #2f4f36;
-  margin-bottom: 6px;
-  border-bottom: 1px dashed #d6e3cf;
-  padding-bottom: 4px;
-}
-
-/* 각 스킬 li 간격 */
-.mini-mindmap__list li + li {
-  margin-top: 3px;
-}
-
-/* 반응형 - 너무 좁아지면 한 줄로 */
 @media (max-width: 600px) {
-  .skills-lists {
-    grid-template-columns: 1fr 1fr;
+  .mindmap__center {
+    width: 180px;
+    height: 180px;
   }
-}
-
-@media (max-width: 400px) {
-  .skills-lists {
-    grid-template-columns: 1fr;
+  .mindmap__name {
+    font-size: 20px;
   }
-}
-/* 전체 컨테이너 */
-.skills-container {
-  width: 100%;
-  margin-top: 40px;
-}
-
-/* 제목 */
-.section-title {
-  font-size: 28px;
-  font-weight: 700;
-  margin-bottom: 25px;
-}
-
-/* 그리드: 3열 → 반응형 */
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-/* 각 카드 박스 */
-.skill-card {
-  background: #ffffff;
-  border: 1px solid #e7e4db;
-  border-radius: 12px;
-  padding: 18px 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-  transition: 0.25s ease;
-}
-
-/* 호버 효과 */
-.skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-}
-
-/* 카테고리 */
-.skill-category {
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-/* 리스트 */
-.skill-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.skill-card li {
-  font-size: 15px;
-  margin: 6px 0;
-  color: #444;
-}
-
-/* bold와 기본 텍스트 컬러 맞춤 */
-.skill-card li strong {
-  font-weight: 700;
-  color: #222;
 }
