@@ -125,30 +125,3 @@ modal.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
-
-// 전화번호 복사 기능
-document.addEventListener("DOMContentLoaded", () => {
-  const phoneEl = document.querySelector(".copy-phone");
-  const messageEl = document.getElementById("copyMessage");
-
-  if (phoneEl) {
-    phoneEl.addEventListener("click", function () {
-      const textToCopy = this.dataset.text;
-
-      navigator.clipboard
-        .writeText(textToCopy)
-        .then(() => {
-          messageEl.textContent = `"${textToCopy}" 복사됨`;
-          messageEl.style.opacity = 1;
-
-          // 1.5초 뒤 메시지 숨김
-          setTimeout(() => {
-            messageEl.style.opacity = 0;
-          }, 1500);
-        })
-        .catch(() => {
-          alert("복사를 지원하지 않는 브라우저입니다.");
-        });
-    });
-  }
-});
