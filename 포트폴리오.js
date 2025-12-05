@@ -125,9 +125,8 @@ modal.addEventListener("click", (e) => {
     document.body.style.overflow = "auto";
   }
 });
-// -------------------------
-// 📌 전화번호 복사 기능
-// -------------------------
+
+// 전화번호 복사 기능
 document.addEventListener("DOMContentLoaded", () => {
   const phoneEl = document.querySelector(".copy-phone");
   const messageEl = document.getElementById("copyMessage");
